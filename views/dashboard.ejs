@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <h1>DASHBOARD</h1>
+                <input name='todo' type="text" id="create-todo" class="input-wrapper">
+                <button class="add_item" >Add ToDo</button>
+    
+    <ul id="item_list" class="todo-grid">
+    <!-- rendering todo list dynamically-->
+    </ul>
+    <div class="group">
+    <button class="show_more button-wrapper">Show More</button>
+        <!-- no need to write in form because we are calling the api from axios  -->
+    <form action="/logout " method="POST">
+     <button class="button-wrapper">Logout</button>
+    </form>
+    <form action="/logout-from-all" method="POST">
+        <button class="button-wrapper"> From All Devices</button>
+    </form>
+    </div>
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root {
+  --dark: #040404;
+  --white: #ffffff;
+  --grey: #6a6a6a;
+  --pink:#d5c2a4;
+}
+body{
+  font: "inter";
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--pink);
+    background-image: url("/assets/todo.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.page-container {
+  padding-top: 78px;
+ padding-right: 20px;
+ padding-bottom: 20px;
+ padding-left: 20px;
+ position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  min-height: 100vh;
+  z-index: 900; /* any value less than navbar's z-index */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .html , body{
+    background-attachment: fixed;
+  }
+  .page-container {
+    padding: auto;
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+
+  .podcast-grid {
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center;
+      gap: 10px;  
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      width: 90%;
+      height: auto;
+  }
+a{
+  text-decoration: none;
+}
+}
+.gradient{
+  height: 150px;
+  width: 800px;
+  background: hwb(239 29% 7%);
+  position: absolute;
+  top: -80px;
+  z-index: -1;
+  filter: blur(150px);
+}
+
+/* styling for entire application */
+/* formStyles.css */
+.form-container {
+  padding-top: 100px;
+  background: rgba(255, 255, 255, 0.1); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 600px;
+  /* background-color: #8e748c; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-wrapper {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  background-color:#9791ff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--grey);
+  color:var(--white)
+}
+
+label {
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+  color:var(--grey);
+}
+a{
+  text-decoration: none;
+}
+.todo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+.placeholder{
+  width: 100%;
+  height: 78px;
+}
+
+.todo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  height: auto;
+  width: 300px;
+  flex-wrap: wrap;
+  transition: 0.2s;
+}
+
+.todo-card h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.button-wrapper {
+  margin-top: 10px;
+}
+.todo-title{
+  text-decoration: none;
+}
+
+.group{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  gap: 10px;
+
+}
+@media (max-width:768px){
+  .todo-card{
+      width: auto;
+      height: auto;
+  }
+  .group{
+      width: auto;
+      height: auto;   
+  }
+}
